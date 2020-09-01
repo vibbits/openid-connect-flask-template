@@ -1,9 +1,9 @@
 runtime: python38
+entrypoint: gunicorn -b :$PORT application.main:server
 
 handlers:
 - url: /static
   static_dir: static
 
 - url: /.*
-  entrypoint: gunicorn -b :$PORT application.main:server
   script: auto
