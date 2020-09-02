@@ -1,5 +1,6 @@
 runtime: python38
 entrypoint: gunicorn -b :$PORT application.main:server
+service: oidc-flask-template
 
 handlers:
 - url: /static
